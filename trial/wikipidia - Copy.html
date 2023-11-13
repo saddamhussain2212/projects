@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roserpidia search</title>
+</head>
+<style>
+.container{
+    margin: 2%;
+    text-align: center;
+    background-color: brown;
+    font-size: 10px;
+    color: beige;
+
+}
+#search{
+    font-size: 30px;
+    font-style: italic;
+    margin: 2%;
+    background-color: blueviolet;
+    text-align: center;
+    width: 40%;
+    height: 30px;
+    border:solid burlywood;
+    text-align: center;
+}
+#searchBtn{
+    width: 100px;
+    font-size: 30px;
+    color: #f00ca0;
+    margin: 2%;
+    background-color: darkgreen;
+    text-align: center;
+}
+#searchResults{
+    margin: 2%;
+    color: darkcyan;
+    background-color: gold;
+    text-align: center;
+    font-size: 24px;
+}
+
+</style>
+<body>
+    <div class="container">
+<h1>Roserpidia search</h1>
+        <input type="text" id="search">
+        <input type="button" name="search" value="search" id="searchBtn" onclick="search()">
+        <p id="searchResults">searching results are : </p>
+    </div>
+    <script>
+        function search(){
+          var searchItem= document.getElementById('search') .value
+          var searchResults=document.getElementById('searchResults');
+          searchResults.innerHTML = searchItem;
+        }
+    </script>
+</body>
+</html>
